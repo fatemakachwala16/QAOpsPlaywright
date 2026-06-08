@@ -1,0 +1,14 @@
+LoginPage Practise | Rahul Shetty Academy
+Incorrect username/password.
+
+	        iphone X
+	    
+
+	        Samsung Note 8
+	    
+[
+  '\n\t        iphone X\n\t    ',
+  '\n\t        Samsung Note 8\n\t    ',
+  '\n\t        Nokia Edge\n\t    ',
+  '\n\t        Blackberry\n\t    '
+]
