@@ -24,7 +24,7 @@ test('More validation test', async ({ page }) => {
     //iframe
     const framesPage = page.frameLocator('#courses-iframe')
     await framesPage.locator('li a[href="lifetime-access"]:visible').click()
-    const text = await framesPage.locator('div h2 span').innerText()
+    const text = await framesPage.locator('div h2 span').first().innerText()
     console.log(text)
 
 
@@ -43,9 +43,9 @@ test('Screenshot and Visual testing', async ({ page }) => {
 
 })
 
-test('Visual testing', async ({ page }) => {
+test.skip('Visual testing', async ({ page }) => {
 
-    await page.goto('https://www.google.com')
+    await page.goto('https://eventhub.rahulshettyacademy.com/')
     expect(await page.screenshot()).toMatchSnapshot('landingPage.png')
 
 

@@ -52,7 +52,7 @@ test('API', async ({ page }) => {
 
     expect(eventResponse.ok()).toBeTruthy()
     const eventJSONResponse = await eventResponse.json()
-    eventId = eventJSONResponse.data[0].id
+    eventId = eventJSONResponse.data[2].id
     console.log(eventId)
 
     //Step 3 — Create a booking via API as Yahoo user
