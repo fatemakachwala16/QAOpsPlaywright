@@ -66,7 +66,7 @@ test('login to the Lets shop application', async ({ page }) => {
 
     await page.locator('label[routerlink="/dashboard/myorders"]').click()
 
-    expect(page.locator('div.table-responsive h1')).toHaveText('Your Orders')
+    await expect(page.locator('div.table-responsive h1')).toHaveText('Your Orders')
 
     const tableLocator = page.locator('tbody tr')
     const countRows = await page.locator('tbody tr').count()
