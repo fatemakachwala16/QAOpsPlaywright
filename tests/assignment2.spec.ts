@@ -28,7 +28,7 @@ test('Single ticket booking is eligible for refund', async ({ page }) => {
 
     await page.getByRole('link', { name: 'Browse Events →' }).click()
 
-    await page.locator('[data-testid="event-card"]').first().locator('#book-now-btn').click()
+    await page.locator('[data-testid="event-card"]').last().locator('#book-now-btn').click()
 
     await page.getByLabel('Full Name').fill('Test User')
     await page.locator('#customer-email').fill('testUser@gmail.com')
@@ -36,6 +36,7 @@ test('Single ticket booking is eligible for refund', async ({ page }) => {
     await page.locator('.confirm-booking-btn').click()
 
     //Step 3 — Navigate to booking detail
+
 
     await page.getByRole('link', { name: 'View My Bookings' }).click()
     await expect(page).toHaveURL('https://eventhub.rahulshettyacademy.com/bookings')
@@ -80,9 +81,9 @@ test('Group ticket booking is NOT eligible for refund', async ({ page }) => {
 
     await page.getByRole('link', { name: 'Browse Events →' }).click()
 
-    await page.locator('[data-testid="event-card"]').first().locator('#book-now-btn').click()
+    await page.locator('[data-testid="event-card"]').last().locator('#book-now-btn').click()
 
-    await page.getByRole('button', {name: '+'}).click({clickCount: 2});
+    await page.getByRole('button', { name: '+' }).click({ clickCount: 2 });
 
     await page.getByLabel('Full Name').fill('Test User')
     await page.locator('#customer-email').fill('testUser@gmail.com')
