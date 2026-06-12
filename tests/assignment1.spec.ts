@@ -65,7 +65,7 @@ test('assignment 1 - event hub', async ({ page }) => {
     const bookingRef = (await page.locator('.booking-ref').first().innerText()).trim()
     console.log(bookingRef)
 
-    //Step 7 — Verify in My Bookings
+    //Step 7 — Verify in My Bookings 
 
     await page.getByRole('link', { name: 'View My Bookings' }).click()
 
